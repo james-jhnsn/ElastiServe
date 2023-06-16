@@ -20,7 +20,6 @@ export class EBApplnStack extends cdk.Stack {
     // The code that defines your stack goes here
 
     // construct an S3 asset Zip from directory up.
-    // This code uses the S3 Assets module and takes the folder of the web app located in the root of the CDK app, compresses into a zip file and uploads it to S3. Whenever we update the application source code and push to the GitHub repo, the file will automatically get updated in S3.
     const webAppZipArchive = new s3assets.Asset(this, 'webAppZip', {
       path: `${__dirname}/../src`,
     });
