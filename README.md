@@ -5,7 +5,7 @@ ElastiServe
 
 This project leverages the power of AWS CDK (Cloud Development Kit) to streamline the deployment and management of a web application. By utilizing AWS CDK's capabilities, we can seamlessly package the web application source code, provision the required deployment infrastructure using AWS Elastic Beanstalk resources, and establish a robust CI/CD pipeline through AWS CDK Pipelines.
 
-##Features
+## Features
 
 - Automated Deployment: The project incorporates AWS CDK to automate the provisioning of deployment infrastructure, enabling rapid and consistent deployment of the web     application.
 
