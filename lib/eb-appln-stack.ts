@@ -14,6 +14,9 @@ export interface EBEnvProps extends cdk.StackProps {
 }
 
 export class EBApplnStack extends cdk.Stack {
+    minSize?: string;
+    maxSize?: string;
+    
    constructor(scope: Construct, id: string, props?: EBEnvProps) {
        super(scope, id, props);
 
