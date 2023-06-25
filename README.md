@@ -16,9 +16,13 @@ workloads and ensuring high availability.
 
 - Continuous Integration and Continuous Deployment: The project integrates AWS CDK Pipelines to establish a robust CI/CD pipeline, enabling automated and efficient delivery of application updates and enhancements.
 
-## Technologies Used
+## Prerequisites
 
-This project utilizes the following technologies:
+- An AWS account and CLI installed.
+- CDK installed.
+- A GitHub account.
+
+## Technologies Used
 
 - **AWS Cloud Development Kit (AWS CDK)**: AWS CDK is an open-source software development framework that allows developers to define cloud infrastructure using familiar programming languages. It provisions the defined infrastructure through AWS CloudFormation. AWS CDK consists of three major components: a core framework for modeling reusable infrastructure components, a CLI for interacting with the framework, and a Construct Library that provides high-level, abstracted components of AWS resources.
 
@@ -31,24 +35,3 @@ This project utilizes the following technologies:
 - **Node.js**: Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It is used in this project to create a simple non-containerized web application.
 
 These technologies work together to streamline the development process, enabling the creation of a non-containerized Node.js web application, packaging the source code using AWS CDK, creating the deployment infrastructure with AWS Elastic Beanstalk resources, and setting up a CI/CD pipeline using AWS CDK Pipelines powered by AWS CodePipeline.
-
-
-## Follow these steps to get started with the project:
-
-Clone the repository:
-
-    git clone <repository-url>
-
-Install the necessary dependencies:
-
-    npm install
-
-Configure AWS credentials:
-
-    aws configure
-
-Customize the configuration files as needed.
-
-Deploy the web application:
-
-    npm run deploy
