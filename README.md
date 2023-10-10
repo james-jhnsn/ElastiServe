@@ -26,9 +26,9 @@ To integrate AWS CodePipeline with your GitHub repository, you'll need to set up
 
 Remember, always keep your GitHub access token confidential. Never expose it in your public repositories or elsewhere.
 
-# Deploy Web Application
+## Deploy Web Application
 
-## Bootstrap CDK in Your Account
+**Bootstrap CDK in Your Account**
 
 If you're deploying with the AWS CDK for the first time in a specific account or region, you'll need to bootstrap it. If you're unsure about whether you've bootstrapped already, executing the command below will upgrade the bootstrap stack if needed:
 
