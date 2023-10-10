@@ -35,15 +35,15 @@ Remember, always keep your GitHub access token confidential. Never expose it in 
    bash
          npx cdk bootstrap aws://ACCOUNT-NUMBER/REGION
 
-For example:
-
-bash
-
-      npx cdk bootstrap aws://123456789012/us-east-1
-
-You can retrieve your account number from the AWS Management Console and the Region name from the official Region list.
-
-These bootstrap resources are contained within an AWS CloudFormation stack, typically named CDKToolkit. You can find it in the CloudFormation console.
+   For example:
+   
+   bash
+   
+         npx cdk bootstrap aws://123456789012/us-east-1
+   
+   You can retrieve your account number from the AWS Management Console and the Region name from the official Region list.
+   
+   These bootstrap resources are contained within an AWS CloudFormation stack, typically named CDKToolkit. You can find it in the CloudFormation console.
 
 2. **Build and Deploy the CDK Application**
 
