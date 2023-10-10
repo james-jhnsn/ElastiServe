@@ -43,9 +43,9 @@ This project leverages the power of AWS CDK (Cloud Development Kit) to streamlin
 
 2. **Build and Deploy the CDK Application**
 
-   - Once you've bootstrapped your account and region, you can build and deploy your CDK application.
+- Once you've bootstrapped your account and region, you can build and deploy your CDK application.
    
-         npm run build
+      npm run build
 
 ## Add a Deploy Stage for Beanstalk Environment
    
