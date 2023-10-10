@@ -13,23 +13,23 @@ This project leverages the power of AWS CDK (Cloud Development Kit) to streamlin
 
 ## Connecting GitHub to CodePipeline
 
-To integrate AWS CodePipeline with your GitHub repository, you'll need to set up your previously created GitHub personal access token.
+- To integrate AWS CodePipeline with your GitHub repository, you'll need to set up your previously created GitHub personal access token.
 
 1. **Store the GitHub Token in AWS Secrets Manager**:
 
-   This token should be a plaintext secret (not JSON) in AWS Secrets Manager with the name `github-token`.
+   - This token should be a plaintext secret (not JSON) in AWS Secrets Manager with the name `github-token`.
 
-   Execute the following command, making sure to replace `GITHUB_ACCESS_TOKEN` with your actual GitHub token and `REGION` with your AWS region:
+   - Execute the following command, making sure to replace `GITHUB_ACCESS_TOKEN` with your actual GitHub token and `REGION` with your AWS region:
    
          aws secretsmanager create-secret --name github-token --description "Github access token for cdk" --secret-string GITHUB_ACCESS_TOKEN --region REGION
    
-   Remember, always keep your GitHub access token confidential. Never expose it in your public repositories or elsewhere.
+   - Remember, always keep your GitHub access token confidential. Never expose it in your public repositories or elsewhere.
 
 ## Deploy Web Application
 
 1. **Bootstrap CDK in Your Account**
 
-   If you're deploying with the AWS CDK for the first time in a specific account or region, you'll need to bootstrap it. If you're unsure about whether you've bootstrapped already, executing the command below will upgrade the bootstrap stack if needed:
+   - If you're deploying with the AWS CDK for the first time in a specific account or region, you'll need to bootstrap it. If you're unsure about whether you've bootstrapped already, executing the command below will upgrade the bootstrap stack if needed:
 
          npx cdk bootstrap aws://ACCOUNT-NUMBER/REGION
 
@@ -37,13 +37,13 @@ To integrate AWS CodePipeline with your GitHub repository, you'll need to set up
    
          npx cdk bootstrap aws://123456789012/us-east-1
    
-   You can retrieve your account number from the AWS Management Console and the Region name from the official Region list.
+   - You can retrieve your account number from the AWS Management Console and the Region name from the official Region list.
    
-   These bootstrap resources are contained within an AWS CloudFormation stack, typically named CDKToolkit. You can find it in the CloudFormation console.
+   - These bootstrap resources are contained within an AWS CloudFormation stack, typically named CDKToolkit. You can find it in the CloudFormation console.
 
 2. **Build and Deploy the CDK Application**
 
-   Once you've bootstrapped your account and region, you can build and deploy your CDK application.
+   - Once you've bootstrapped your account and region, you can build and deploy your CDK application.
    
          npm run build
 
@@ -51,24 +51,24 @@ To integrate AWS CodePipeline with your GitHub repository, you'll need to set up
    
       npm run buildgit add .git commit -m 'Add Pre-Prod stage'git push
    
-   In CodePipeline console, once the UpdatePipeline stage picks up new code for an additional stage, it will self-mutate and add 2 new stages, one for the Assets and another for Pre-Prod.
+   - In CodePipeline console, once the UpdatePipeline stage picks up new code for an additional stage, it will self-mutate and add 2 new stages, one for the Assets and another for Pre-Prod.
    
-   CodePipeline self mutated to add 2 new stages Assets and Pre-prod
+   - CodePipeline self mutated to add 2 new stages Assets and Pre-prod
    Once the UpdatePipeline stage has completed successfully, the pipeline will again run from start. This time it will not stop at UpdatePipeline stage. It will transition further to the new stages Assets and Pre-prod to deploy the Beanstalk application, environment and the my_webapp application.
 
 ## Viewing Application Deployed in the Cloud
 
-   After the pipeline finishes running through the final Pre-Prod stage, we can confirm that the service is up and running.
+   - After the pipeline finishes running through the final Pre-Prod stage, we can confirm that the service is up and running.
    
-   We can find this URL by going to the Elastic Beanstalk service in the AWS Management Console, and look for the environment called MyWebAppEnvironment. Choose the URL to launch the web app.
+   - We can find this URL by going to the Elastic Beanstalk service in the AWS Management Console, and look for the environment called MyWebAppEnvironment. Choose the URL to launch the web app.
 
 ## Clean Up
 
-   The benefit of using AWS CDK and CloudFormation for all infrastructure is that cleaning up AWS environment is easy. Run the following command inside the CDK application directory:
+   - The benefit of using AWS CDK and CloudFormation for all infrastructure is that cleaning up AWS environment is easy. Run the following command inside the CDK application directory:
 
-      cdk destroy
+         cdk destroy
 
-   We can verify the CdkPipelineStack stack was deleted by going to the AWS CloudFormation Management Console.
+   _ We can verify the CdkPipelineStack stack was deleted by going to the AWS CloudFormation Management Console.
 
 ## Conclusion
 
