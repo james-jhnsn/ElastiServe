@@ -79,3 +79,7 @@ To integrate AWS CodePipeline with your GitHub repository, you'll need to set up
       cdk destroy
 
    We can verify the CdkPipelineStack stack was deleted by going to the AWS CloudFormation Management Console.
+
+## Conclusion
+
+Congratulations! We have now learned how to deploy a non-containerized application in the cloud. We created a simple Node.js web application, and then we used AWS CDK to create deployment infrastructure(using AWS Elastic Beanstalk resources) and the CI/CD pipeline (using AWS CDK Pipelines)
