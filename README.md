@@ -55,9 +55,27 @@ To integrate AWS CodePipeline with your GitHub repository, you'll need to set up
 
 ## Add a Deploy Stage for Beanstalk Environment
 
+   bash
+   
       npm run buildgit add .git commit -m 'Add Pre-Prod stage'git push
+   
+   In CodePipeline console, once the UpdatePipeline stage picks up new code for an additional stage, it will self-mutate and add 2 new stages, one for the Assets and another for Pre-Prod.
+   
+   CodePipeline self mutated to add 2 new stages Assets and Pre-prod
+   Once the UpdatePipeline stage has completed successfully, the pipeline will again run from start. This time it will not stop at UpdatePipeline stage. It will transition further to the new stages Assets and Pre-prod to deploy the Beanstalk application, environment and the my_webapp application.
 
-In CodePipeline console, once the UpdatePipeline stage picks up new code for an additional stage, it will self-mutate and add 2 new stages, one for the Assets and another for Pre-Prod.
+## Viewing Application Deployed in the Cloud
 
-CodePipeline self mutated to add 2 new stages Assets and Pre-prod
-Once the UpdatePipeline stage has completed successfully, the pipeline will again run from start. This time it will not stop at UpdatePipeline stage. It will transition further to the new stages Assets and Pre-prod to deploy the Beanstalk application, environment and the my_webapp application.
+   After the pipeline finishes running through the final Pre-Prod stage, we can confirm that the service is up and running.
+   
+   We can find this URL by going to the Elastic Beanstalk service in the AWS Management Console, and look for the environment called MyWebAppEnvironment. Choose the URL to launch the web app.
+
+## Clean Up
+
+   The benefit of using AWS CDK and CloudFormation for all infrastructure is that cleaning up AWS environment is easy. Run the following command inside the CDK application directory:
+   
+   bash
+
+      cdk destroy
+
+   We can verify the CdkPipelineStack stack was deleted by going to the AWS CloudFormation Management Console.
