@@ -43,7 +43,7 @@ This project leverages the power of AWS CDK (Cloud Development Kit) to streamlin
    
       npm run build
 
-## Add a Deploy Stage for Beanstalk Environment
+- ## Add a Deploy Stage for Beanstalk Environment
    
       npm run buildgit add .git commit -m 'Add Pre-Prod stage'git push
    
