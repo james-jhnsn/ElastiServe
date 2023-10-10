@@ -56,14 +56,14 @@ To integrate AWS CodePipeline with your GitHub repository, you'll need to set up
 
 ## Add a Deploy Stage for Beanstalk Environment
 
-      bash
-      
-         npm run buildgit add .git commit -m 'Add Pre-Prod stage'git push
-      
-      In CodePipeline console, once the UpdatePipeline stage picks up new code for an additional stage, it will self-mutate and add 2 new stages, one for the Assets and another for Pre-Prod.
-      
-      CodePipeline self mutated to add 2 new stages Assets and Pre-prod
-      Once the UpdatePipeline stage has completed successfully, the pipeline will again run from start. This time it will not stop at UpdatePipeline stage. It will transition further to the new stages Assets and Pre-prod to deploy the Beanstalk application, environment and the my_webapp application.
+   bash
+   
+      npm run buildgit add .git commit -m 'Add Pre-Prod stage'git push
+   
+   In CodePipeline console, once the UpdatePipeline stage picks up new code for an additional stage, it will self-mutate and add 2 new stages, one for the Assets and another for Pre-Prod.
+   
+   CodePipeline self mutated to add 2 new stages Assets and Pre-prod
+   Once the UpdatePipeline stage has completed successfully, the pipeline will again run from start. This time it will not stop at UpdatePipeline stage. It will transition further to the new stages Assets and Pre-prod to deploy the Beanstalk application, environment and the my_webapp application.
 
 ## Viewing Application Deployed in the Cloud
 
