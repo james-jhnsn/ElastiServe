@@ -33,6 +33,7 @@ To integrate AWS CodePipeline with your GitHub repository, you'll need to set up
    If you're deploying with the AWS CDK for the first time in a specific account or region, you'll need to bootstrap it. If you're unsure about whether you've bootstrapped already, executing the command below will upgrade the bootstrap stack if needed:
    
    bash
+
          npx cdk bootstrap aws://ACCOUNT-NUMBER/REGION
 
    For example:
@@ -82,4 +83,4 @@ To integrate AWS CodePipeline with your GitHub repository, you'll need to set up
 
 ## Conclusion
 
-Congratulations! We have now learned how to deploy a non-containerized application in the cloud. We created a simple Node.js web application, and then we used AWS CDK to create deployment infrastructure(using AWS Elastic Beanstalk resources) and the CI/CD pipeline (using AWS CDK Pipelines)
+   Congratulations! We have now learned how to deploy a non-containerized application in the cloud. We created a simple Node.js web application, and then we used AWS CDK to create deployment infrastructure(using AWS Elastic Beanstalk resources) and the CI/CD pipeline (using AWS CDK Pipelines)
