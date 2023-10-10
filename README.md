@@ -20,9 +20,8 @@ To integrate AWS CodePipeline with your GitHub repository, you'll need to set up
    This token should be a plaintext secret (not JSON) in AWS Secrets Manager with the name `github-token`.
 
    Execute the following command, making sure to replace `GITHUB_ACCESS_TOKEN` with your actual GitHub token and `REGION` with your AWS region:
-
-   ```bash
-   aws secretsmanager create-secret --name github-token --description "Github access token for cdk" --secret-string GITHUB_ACCESS_TOKEN --region REGION
+   
+         aws secretsmanager create-secret --name github-token --description "Github access token for cdk" --secret-string GITHUB_ACCESS_TOKEN --region REGION
    
    Remember, always keep your GitHub access token confidential. Never expose it in your public repositories or elsewhere.
 
