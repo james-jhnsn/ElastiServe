@@ -45,7 +45,7 @@ This project leverages the power of AWS CDK (Cloud Development Kit) to streamlin
 
 ## Add a Deploy Stage for Beanstalk Environment
    
-      npm run buildgit add .git commit -m 'Add Pre-Prod stage'git push
+            npm run buildgit add .git commit -m 'Add Pre-Prod stage'git push
    
    - In CodePipeline console, once the UpdatePipeline stage picks up new code for an additional stage, it will self-mutate and add 2 new stages, one for the Assets and another for Pre-Prod.
    
