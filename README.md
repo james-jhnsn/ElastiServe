@@ -25,3 +25,32 @@ To integrate AWS CodePipeline with your GitHub repository, you'll need to set up
    aws secretsmanager create-secret --name github-token --description "Github access token for cdk" --secret-string GITHUB_ACCESS_TOKEN --region REGION
 
 Remember, always keep your GitHub access token confidential. Never expose it in your public repositories or elsewhere.
+
+# Deploy Web Application
+
+## Bootstrap CDK in Your Account
+
+If you're deploying with the AWS CDK for the first time in a specific account or region, you'll need to bootstrap it. If you're unsure about whether you've bootstrapped already, executing the command below will upgrade the bootstrap stack if needed:
+
+bash
+      npx cdk bootstrap aws://ACCOUNT-NUMBER/REGION
+
+For example:
+
+bash
+
+      npx cdk bootstrap aws://123456789012/us-east-1
+
+You can retrieve your account number from the AWS Management Console and the Region name from the official Region list.
+
+These bootstrap resources are contained within an AWS CloudFormation stack, typically named CDKToolkit. You can find it in the CloudFormation console.
+
+**Build and Deploy the CDK Application**
+
+Once you've bootstrapped your account and region, you can build and deploy your CDK application.
+
+**Build the CDK app:**
+
+bash
+
+      npm run build
