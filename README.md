@@ -28,7 +28,7 @@ Remember, always keep your GitHub access token confidential. Never expose it in 
 
 ## Deploy Web Application
 
-**Bootstrap CDK in Your Account**
+1. **Bootstrap CDK in Your Account**
 
 If you're deploying with the AWS CDK for the first time in a specific account or region, you'll need to bootstrap it. If you're unsure about whether you've bootstrapped already, executing the command below will upgrade the bootstrap stack if needed:
 
@@ -45,11 +45,9 @@ You can retrieve your account number from the AWS Management Console and the Reg
 
 These bootstrap resources are contained within an AWS CloudFormation stack, typically named CDKToolkit. You can find it in the CloudFormation console.
 
-**Build and Deploy the CDK Application**
+2. **Build and Deploy the CDK Application**
 
 Once you've bootstrapped your account and region, you can build and deploy your CDK application.
-
-**Build the CDK app:**
 
 bash
 
