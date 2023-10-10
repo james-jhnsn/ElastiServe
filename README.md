@@ -10,3 +10,18 @@ This project leverages the power of AWS CDK (Cloud Development Kit) to streamlin
 - **AWS Account and CLI**: Set up your [AWS Environment Link](https://aws.amazon.com/getting-started/guides/setup-environment/?sc_channel=el&sc_campaign=devopswave&sc_content=cicdcdkebaws&sc_geo=mult&sc_country=mult&sc_outcome=acq) and ensure the CLI is installed.
 - **AWS CDK v2.7.0**: Install the CDK. Refer to the [Get Started with AWS CDK guide](https://aws.amazon.com/getting-started/guides/setup-cdk/?sc_channel=el&sc_campaign=devopswave&sc_content=cicdcdkebaws&sc_geo=mult&sc_country=mult&sc_outcome=acq) for more.
 - **GitHub Account**: Create one if necessary at [GitHub](https://github.com).
+
+## Connecting GitHub to CodePipeline
+
+To integrate AWS CodePipeline with your GitHub repository, you'll need to set up your previously created GitHub personal access token.
+
+1. **Store the GitHub Token in AWS Secrets Manager**:
+
+   This token should be a plaintext secret (not JSON) in AWS Secrets Manager with the name `github-token`.
+
+   Execute the following command, making sure to replace `GITHUB_ACCESS_TOKEN` with your actual GitHub token and `REGION` with your AWS region:
+
+   ```bash
+   aws secretsmanager create-secret --name github-token --description "Github access token for cdk" --secret-string GITHUB_ACCESS_TOKEN --region REGION
+
+Remember, always keep your GitHub access token confidential. Never expose it in your public repositories or elsewhere.
