@@ -33,9 +33,9 @@ This project leverages the power of AWS CDK (Cloud Development Kit) to streamlin
 
       npx cdk bootstrap aws://ACCOUNT-NUMBER/REGION
 
-For example:
+- For example:
    
-      npx cdk bootstrap aws://123456789012/us-east-1
+**npx cdk bootstrap aws://123456789012/us-east-1**
    
    - You can retrieve your account number from the AWS Management Console and the Region name from the official Region list.
    
@@ -68,7 +68,7 @@ For example:
 
          cdk destroy
 
-   _ We can verify the CdkPipelineStack stack was deleted by going to the AWS CloudFormation Management Console.
+- We can verify the CdkPipelineStack stack was deleted by going to the AWS CloudFormation Management Console.
 
 ## Conclusion
 
