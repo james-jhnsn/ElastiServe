@@ -17,7 +17,7 @@ export class CdkPipelineStack extends Stack {
          // How it will be built and synthesized
          synth: new ShellStep('Synth', {
            // Where the source can be found
-           input: CodePipelineSource.gitHub('Jamesjr95/ElastiServe', 'main'),
+           input: CodePipelineSource.gitHub('james-jhnsn/ElastiServe', 'main'),
            
            // Install dependencies, build and run cdk synth
            installCommands: ['npm i -g npm@latest'],
