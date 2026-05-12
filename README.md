@@ -10,7 +10,7 @@ This project leverages the power of AWS CDK (Cloud Development Kit) to streamlin
 **Clone the Repository**
 
 ```bash
-   git clone https://github.com/james-jhnsn/ElastiServe
+   git clone https://github.com/james-jhnsn/ElastiServe.git
    cd ElastiServe
 ```
    
