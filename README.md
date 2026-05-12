@@ -8,7 +8,7 @@ This project leverages the power of AWS CDK (Cloud Development Kit) to streamlin
 ## Prerequisites
 
 **Clone the Repository**
-   git clone [<your-repo-link>](https://github.com/james-jhnsn/ElastiServe)
+   git clone (https://github.com/james-jhnsn/ElastiServe)
 
    
 - **AWS Account and CLI**: Set up your [AWS Environment Link](https://aws.amazon.com/getting-started/guides/setup-environment/?sc_channel=el&sc_campaign=devopswave&sc_content=cicdcdkebaws&sc_geo=mult&sc_country=mult&sc_outcome=acq) and ensure the CLI is installed.
